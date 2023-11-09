@@ -1,0 +1,1063 @@
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f9f6ff;
+}
+
+#webpage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/******************HEADER SECTION START******************/
+.header-section {
+  background-color: #beebc226;
+  padding: 22px 65px 192px 50px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.logo {
+  width: 143px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav-bar .nav-item {
+  padding: 10px 25px;
+}
+
+.nav-link {
+  color: #43994a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.landing-container {
+  display: flex;
+  color: #43994a;
+}
+
+.landing-title-span {
+  font-size: 50px;
+  color: d83d3d;
+}
+
+.landing-description {
+  margin-top: 50px;
+}
+
+.landing-text {
+  color: #616161;
+}
+
+.landing-image {
+  position: absolute;
+  right: 0;
+}
+
+.landing-photo {
+  padding: 60px 0 60px 60px;
+  width: 772px;
+  height: auto;
+}
+
+.landing-content {
+  margin-top: 35px;
+}
+
+.button {
+  margin: 15px;
+  border-radius: 12px;
+}
+
+.base-button {
+  border: none;
+  color: white;
+  background-color: #43994a;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s ease;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.base-button:hover {
+  background-color: #246a2a;
+}
+
+.button1 {
+  border: none;
+  color: #43994a;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: linear-gradient(
+    180deg,
+    #beebc2 40.02%,
+    rgba(190, 235, 194, 0.5) 100%
+  );
+}
+
+.button2 {
+  color: #f7f7f7;
+  border-color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #4caf50;
+}
+
+.nav-button {
+  background-color: #43994a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/******************SERVICES SECTION START******************/
+.services-text {
+  padding: 35px 60px 65px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.services-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 25px;
+}
+
+.service-item {
+  position: relative;
+  display: inline-block;
+}
+
+.service-image {
+  object-fit: cover;
+  width: 600px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.service-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.service-text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px 20px 35px 20px;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.service-heading {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 35px;
+  line-height: 1.4;
+}
+
+.service-sub-heading {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/******************SERVICES SECTION END******************/
+
+/******************BMI SECTION START******************/
+
+/* Styling the result section */
+.bmi-result {
+  display: none;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Styling for each piece of information (BMI, Category, and Daily Calorie Intake) */
+.bmi-result p {
+  font-weight: bold;
+  color: #009688;
+  margin: 5px 0;
+}
+
+/* Define the styles for the BMI value */
+.Bmi-Calc {
+  background-color: #beebc226;
+
+  padding: 30px 0px 40px 0px;
+}
+
+.bmi-title {
+  text-align: center;
+  font-size: 40px;
+  margin-block: 30px;
+}
+
+.bmi-title-letters {
+  color: #43994a;
+  font-size: 100px;
+}
+
+.bmi-h3 {
+  margin: 0;
+}
+
+#bmi-output {
+  font-weight: bold;
+  color: #43994a;
+}
+
+#category-output {
+  font-weight: bold;
+  color: #43994a;
+}
+
+#calorie-output {
+  font-weight: bold;
+  color: #43994a;
+}
+
+.bmi-form {
+  background-color: #fff;
+  height: 240px;
+  width: 450px;
+  border-radius: 20px;
+  margin: 20px auto 20px auto;
+  display: block;
+  text-align: center;
+  border: solid 1px #43994a;
+  box-shadow: 0 0 40px 0 #ddd;
+}
+
+.bmi-form:hover {
+  box-shadow: 0 0 60px 0 #ccc;
+  transition: 0.4s;
+  transform: scale(1.02);
+}
+
+.bmi-row-one {
+  padding: 30px 20px 15px 20px;
+}
+
+.bmi-row-two {
+  padding: 15px 20px 30px 20px;
+}
+
+.bmi-text-input {
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #dbfee5;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.bmi-text-input:last-child {
+  margin-bottom: 35px;
+}
+
+.bmi-text-input:hover {
+  background-color: #cbe7fd;
+}
+
+#bmi-submit {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  background-color: #43994a;
+  color: #fff;
+  margin: auto;
+  display: block;
+  outline: none;
+  cursor: pointer;
+}
+
+#bmi-submit:hover {
+  background-color: #defedb;
+  color: #43994a;
+}
+
+.bmi-text {
+  display: inline-block;
+  margin: 5px 20px 5px 8px;
+}
+
+.bmi-radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bmi-radio-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.bmi-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #defedb;
+  border-radius: 50%;
+}
+
+.bmi-radio-container:hover input ~ .bmi-checkmark {
+  background-color: rgba(28, 107, 70, 0.669);
+}
+
+.bmi-radio-container input:checked ~ .bmi-checkmark {
+  background-color: #43994a;
+}
+
+.bmi-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.bmi-radio-container input:checked ~ .bmi-checkmark:after {
+  display: block;
+}
+
+.bmi-radio-container .bmi-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/******************BMI SECTION END******************/
+
+/**************TEAM SECTION START********************************/
+
+.team-section {
+  padding: 90px 60px;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 120px;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-card {
+  padding: 40px;
+  background: white;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+}
+
+.team-text {
+  color: #c4c4c4;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.subtext {
+  font-size: 9px;
+}
+
+.join-date {
+  font-size: 14px;
+}
+
+/**************TEAM SECTION END********************************/
+
+/************MEMBERSHIP SECTION START*************/
+.membership-pricing {
+  background-color: #beebc226;
+}
+
+.pricing-heading {
+  padding: 35px 60px 65px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+
+.membership-option {
+  padding: 40px;
+  background: white;
+  text-align: center;
+  color: black;
+  width: 310px;
+  border-radius: 12px;
+}
+
+.option-title {
+  color: #43994a;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.pricing-details .price {
+  margin: 0;
+}
+
+.features-list {
+  padding: 0;
+  list-style: none;
+}
+
+.savings-text {
+  margin-top: 0;
+  opacity: 0.8;
+}
+
+.popular-option {
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  border-width: 0.2px;
+  border-radius: 12px 12px 12px 12px;
+  width: 310px;
+  background: #fff;
+  padding-top: 40px;
+}
+
+.card-heading {
+  text-align: center;
+  color: white;
+  padding: 15px;
+  position: absolute;
+  height: 60px;
+  top: -70px;
+  right: 1px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background-color: #43994a;
+}
+
+/************MEMBERSHIP SECTION END*************/
+
+/*********************QUESTION SECTION START***************************/
+
+.question-container {
+  padding: 50px;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.svg-question-icon {
+  width: 50;
+  height: 60;
+}
+
+.question-box {
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.05);
+  position: relative;
+  background: #fff;
+  padding: 35px 50px;
+  border-radius: 12px;
+}
+
+.sub-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+.question .button {
+  margin: 0;
+}
+
+.main-question {
+  margin: 0;
+  font-size: 30px;
+}
+
+.sub-question-text {
+  color: #c4c4c4;
+  margin: 0;
+}
+
+/*********************QUESTION SECTION END***************************/
+
+/*********************REGISTERATION SECTION START**********************************/
+
+.registeration-title {
+  text-align: center;
+  color: #43994a;
+}
+
+.registeration-container {
+  margin-top: -32px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.checklist {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 38px;
+}
+
+/************SIGN-UP SECTION START*********************/
+#sign-up-form {
+  padding: 0 60px;
+}
+.sign-in-link {
+  color: #246a2a;
+}
+#sign-up-form-wrap {
+  background-color: #fff;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px 0 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  /* width: 100%; */
+  padding: 0 0 0 10px;
+  margin: 0;
+  color: #8a8b8e;
+  border: 1px solid #c2c0ca;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  background: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"] {
+  border-color: #43994a;
+}
+
+input[type="text"]:focus:invalid,
+input[type="email"]:focus:invalid,
+input[type="password"]:focus:invalid {
+  color: #cc1e2b;
+  border-color: #cc1e2b;
+}
+
+input[type="text"]:valid ~ .validation,
+input[type="email"]:valid ~ .validation,
+input[type="password"]:valid ~ .validation {
+  display: block;
+  border-color: #0c0;
+}
+
+input[type="text"]:valid ~ .validation span,
+input[type="email"]:valid ~ .validation span,
+input[type="password"]:valid ~ .validation span {
+  background: #0c0;
+  position: absolute;
+  border-radius: 6px;
+}
+
+input[type="text"]:valid ~ .validation span:first-child,
+input[type="email"]:valid ~ .validation span:first-child,
+input[type="password"]:valid ~ .validation span:first-child {
+  top: 30px;
+  left: 14px;
+  width: 20px;
+  height: 3px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="text"]:valid ~ .validation span:last-child,
+input[type="email"]:valid ~ .validation span:last-child,
+input[type="password"]:valid ~ .validation span:last-child {
+  top: 35px;
+  left: 8px;
+  width: 11px;
+  height: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.validation {
+  display: none;
+  position: absolute;
+  content: " ";
+  height: 60px;
+  width: 30px;
+  right: 15px;
+  top: 0px;
+}
+
+input[type="bmi-submit"] {
+  border: none;
+  display: block;
+  background-color: #43994a;
+  color: #fff;
+  font-weight: bold;
+
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="bmi-submit"]:hover {
+  background-color: #43994a;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#create-account-wrap {
+  background-color: #eeedf1;
+  color: #8a8b8e;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 0 0 4px 4px;
+}
+
+/************SIGN-UP SECTION END*********************/
+/*********************REGISTERATION SECTION END**********************************/
+
+/*********************************FOOTER SECTION START******************************/
+
+.footer-section {
+  background-color: #43994a;
+  padding: 90px 0 20px 0;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explore {
+  text-align: center;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px 0;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 5px;
+  color: #43994a;
+  text-decoration: none;
+}
+
+.icon i {
+  font-size: 20px;
+}
+
+.copy {
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.media-text {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+/*********************************FOOTER SECTION END******************************/
+
+/*the navbar in mobile version*/
+
+.nav-bar--control {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .nav-bar--container {
+    position: relative;
+  }
+
+  .nav-bar--container:hover .nav-bar,
+  .nav-bar--container:focus .nav-bar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+
+  .nav-bar--control {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .nav-bar {
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    flex-direction: column;
+    background: white;
+    height: max-content;
+    right: 0;
+    padding: 10px 20px;
+    box-shadow: 0px 25px 25px 0px rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    transition: 0.2s ease;
+  }
+
+  .checklist {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .Bmi-Calc {
+    padding: 20px;
+  }
+
+  .bmi-title {
+    text-align: center;
+  }
+
+  .bmi-h3 {
+    font-size: 24px;
+  }
+
+  .bmi-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bmi-row-one,
+  .bmi-row-two {
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .bmi-text-input {
+    width: 48%;
+    box-sizing: border-box;
+  }
+
+  .bmi-text,
+  .bmi-radio-container {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .bmi-result {
+    text-align: center;
+  }
+
+  .bmi-output,
+  .category-output,
+  .calorie-output {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .base-button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .services-section {
+    padding: 20px;
+  }
+
+  .services-text {
+    font-size: 24px;
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+  }
+
+  .service-text {
+    text-align: center;
+  }
+
+  .service-heading {
+    font-size: 22px;
+  }
+
+  .service-sub-heading {
+    font-size: 18px;
+  }
+
+  .service-description {
+    margin-bottom: 20px;
+  }
+
+  .base-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .header-section {
+    padding: 10px;
+  }
+
+  .Landing-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .landing-photo {
+    visibility: hidden;
+  }
+
+  .landing-content {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .registeration -img {
+    display: none;
+  }
+
+  .registeration -container {
+    justify-content: center;
+    margin: 80px 0px 50px 0px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .registeration -card-container2 {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .team-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .pricing-options {
+    padding: 20px;
+  }
+
+  .pricing-heading {
+    font-size: 30px;
+  }
+
+  .team-section {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .popular-option {
+    margin-top: 55px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .services-text {
+    font-size: 30px;
+    padding: 0 25px;
+  }
+
+  .service-heading {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .question-container {
+    padding: 0 20px 40px 20px;
+  }
+
+  .main-question {
+    font-size: 22px;
+  }
+
+  .sub-question-text {
+    font-size: 15px;
+  }
+
+  .question-box {
+    padding: 30px;
+    width: 100%;
+  }
+
+  .base-button {
+    padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer-container {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+  }
+}
