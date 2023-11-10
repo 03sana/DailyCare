@@ -63,7 +63,7 @@ body {
 }
 
 .landing-title-span {
-  font-size: 50px;
+  font-size: 70px;
   color: d83d3d;
 }
 
@@ -289,6 +289,7 @@ body {
   width: 450px;
   border-radius: 20px;
   margin: 20px auto 20px auto;
+  padding-top: 20px;
   display: block;
   text-align: center;
   border: solid 1px #43994a;
@@ -301,19 +302,26 @@ body {
   transform: scale(1.02);
 }
 
-.bmi-row-one {
-  padding: 30px 20px 15px 20px;
+.bmi-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
 }
 
-.bmi-row-two {
-  padding: 15px 20px 30px 20px;
+.bmi-sub-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .bmi-text-input {
-  width: 60px;
-  height: 30px;
+  width: 70px;
+  height: 36px;
   border-radius: 10px;
+  font-size: 13px;
   background-color: #dbfee5;
+  transition: 0.2s ease;
   border: none;
   outline: none;
   padding: 5px 10px;
@@ -323,8 +331,12 @@ body {
   margin-bottom: 35px;
 }
 
-.bmi-text-input:hover {
-  background-color: #cbe7fd;
+.bmi-text-input:focus {
+  box-shadow: 0px 0px 0px 4px #43994a52;
+}
+
+.bmi-submit-button {
+  margin-top: 15px;
 }
 
 #bmi-submit {
@@ -345,22 +357,22 @@ body {
   color: #43994a;
 }
 
-.bmi-text {
-  display: inline-block;
-  margin: 5px 20px 5px 8px;
-}
-
 .bmi-radio-container {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   position: relative;
   padding-left: 30px;
   cursor: pointer;
   user-select: none;
 }
 
+.bmi-text {
+  margin: 0;
+}
+
 .bmi-radio-container input {
-  position: absolute;
-  opacity: 0;
+  display: none;
 }
 
 .bmi-checkmark {
@@ -578,11 +590,16 @@ body {
   color: #43994a;
 }
 
+.sub-registeration-title {
+  font-size: 50px;
+}
+
 .registeration-container {
   margin-top: -32px;
   padding: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 120px;
 }
 
 .checklist {
@@ -592,16 +609,28 @@ body {
   gap: 38px;
 }
 
+.check {
+  display: flex;
+  align-items: center;
+  margin-block: 2px;
+  gap: 8px;
+}
+
+.check p {
+  margin: 0;
+}
+
 /************SIGN-UP SECTION START*********************/
 #sign-up-form {
   padding: 0 60px;
 }
+
 .sign-in-link {
   color: #246a2a;
 }
+
 #sign-up-form-wrap {
   background-color: #fff;
-  margin: 30px auto;
   text-align: center;
   padding: 20px 0 0 0;
   border-radius: 4px;
@@ -863,6 +892,7 @@ input[type="bmi-submit"]:hover {
     display: none;
   }
 }
+
 @media screen and (max-width: 850px) {
   .Bmi-Calc {
     padding: 20px;
@@ -903,6 +933,7 @@ input[type="bmi-submit"]:hover {
 
   .bmi-result {
     text-align: center;
+    margin-top: 45px;
   }
 
   .bmi-output,
@@ -916,6 +947,7 @@ input[type="bmi-submit"]:hover {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 850px) {
   .services-section {
     padding: 20px;
