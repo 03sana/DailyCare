@@ -1,3 +1,82 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBMvmCPoLhkvmuHmjj0fyeX_VXSOPmVrXU",
+  authDomain: "signup-form-54011.firebaseapp.com",
+  projectId: "signup-form-54011",
+  storageBucket: "signup-form-54011.appspot.com",
+  messagingSenderId: "408119008262",
+  appId: "1:408119008262:web:762115efb69bdce11d7787",
+  measurementId: "G-6KBSGB83R0",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+console.log(app);
+
+//----- New Registration code start
+document.getElementById("signUp").addEventListener("click", function () {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  //For new registration
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log(user);
+      alert("Registration successfully!!");
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+      console.log(errorMessage);
+      alert(error);
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Add animate class to header-section and landing-section
+  document.querySelector(".header-section").classList.add("animate");
+  document.querySelector(".landing-section").classList.add("animate");
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const serviceItems = document.querySelectorAll(".service-item");
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("slide-up");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  serviceItems.forEach((item) => {
+    observer.observe(item);
+  });
+});
+
 function calculateBMI(e) {
   e.preventDefault();
   // Get input values
@@ -47,3 +126,13 @@ function calculateBMI(e) {
   // Prevent form submission
   return false;
 }
+const menu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".navbar__menu");
+
+// Display mobile menu
+const mobileMenu = () => {
+  menu.classList.toggle("is-active");
+  menuLinks.classList.toggle("active");
+};
+
+menu.addEventListener("click", mobileMenu);
