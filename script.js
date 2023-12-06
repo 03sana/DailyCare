@@ -136,3 +136,29 @@ const mobileMenu = () => {
 };
 
 menu.addEventListener("click", mobileMenu);
+
+// Script for handling the pop-up modal
+function closeModal() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("modal").style.display = "none";
+}
+
+document
+  .getElementById("sign-up-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevents the form from submitting in the traditional way
+
+    // Show the modal after successful registration
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("modal").style.display = "block";
+  });
+
+// Close the modal when the "Close" button is clicked
+document.getElementById("close-btn").addEventListener("click", closeModal);
+
+// Close the modal when the overlay is clicked
+document.getElementById("modal").addEventListener("click", function (event) {
+  if (event.target === document.getElementById("modal")) {
+    closeModal();
+  }
+});
