@@ -58,6 +58,7 @@ body {
 .landing-section.animate {
   opacity: 1;
   transform: translateY(0);
+  padding: 20px;
 }
 
 .logo {
@@ -66,7 +67,7 @@ body {
 }
 
 .navbar {
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -641,6 +642,12 @@ body {
   color: black;
   border-radius: 10px;
   box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transition: 0.3s;
+  transform: translate(-10px);
 }
 
 .team-text {
@@ -679,6 +686,10 @@ body {
   gap: 30px;
   padding: 60px;
   flex-wrap: wrap;
+}
+.membership-option:hover {
+  transition: 0.3s;
+  transform: translate(-10px);
 }
 
 .membership-option {
@@ -745,6 +756,10 @@ body {
   align-content: space-around;
   justify-content: space-around;
 }
+.question-container:hover {
+  transition: 0.3s;
+  transform: translateX(-10px);
+}
 
 .svg-question-icon {
   width: 50;
@@ -757,6 +772,7 @@ body {
   background: #fff;
   padding: 35px 50px;
   border-radius: 12px;
+  margin-top: 20px;
 }
 
 .sub-question {
@@ -1157,6 +1173,15 @@ input[type="bmi-submit"]:hover {
 }
 
 @media screen and (max-width: 850px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  .service-image {
+    width: 100%;
+    max-width: 100%;
+  }
   .services-section {
     padding: 20px;
   }
