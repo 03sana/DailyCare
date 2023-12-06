@@ -1004,7 +1004,12 @@ input[type="bmi-submit"]:hover {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 900;
 }
-
+@media (max-width: 768px) {
+  #modal {
+    width: 90%; /* Adjust the width as needed */
+    max-width: none; /* Override max-width for smaller screens */
+  }
+}
 /************SIGN-UP SECTION END*********************/
 /*********************REGISTERATION SECTION END**********************************/
 
