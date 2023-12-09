@@ -1,0 +1,78 @@
+/************MEMBERSHIP SECTION START*************/
+.membership-pricing {
+  background-color: #beebc226;
+}
+
+.pricing-heading {
+  padding: 35px 60px 65px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+.membership-option:hover {
+  transition: 0.3s;
+  transform: translate(-10px);
+}
+
+.membership-option {
+  padding: 40px;
+  background: white;
+  text-align: center;
+  color: black;
+  width: 310px;
+  border-radius: 12px;
+}
+
+.option-title {
+  color: #43994a;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.pricing-details .price {
+  margin: 0;
+}
+
+.features-list {
+  padding: 0;
+  list-style: none;
+}
+
+.savings-text {
+  margin-top: 0;
+  opacity: 0.8;
+}
+
+.popular-option {
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  border-width: 0.2px;
+  border-radius: 12px 12px 12px 12px;
+  width: 310px;
+  background: #fff;
+  padding-top: 40px;
+}
+
+.card-heading {
+  text-align: center;
+  color: white;
+  padding: 15px;
+  position: absolute;
+  height: 60px;
+  top: -70px;
+  right: 1px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background-color: #43994a;
+}
+
+/************MEMBERSHIP SECTION END*************/

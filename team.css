@@ -1,0 +1,70 @@
+/**************TEAM SECTION START********************************/
+
+.team-section {
+  padding: 90px 60px;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 120px;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.team-card {
+  padding: 40px;
+  background: white;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transition: 0.3s;
+  transform: translate(-10px);
+}
+
+.team-text {
+  color: #c4c4c4;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.subtext {
+  font-size: 9px;
+}
+
+.join-date {
+  font-size: 14px;
+}
+
+/**************TEAM SECTION END********************************/
+
+@media screen and (max-width: 530px) {
+  .team-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .pricing-options {
+    padding: 20px;
+  }
+
+  .pricing-heading {
+    font-size: 30px;
+  }
+
+  .team-section {
+    padding: 20px 10px;
+  }
+}

@@ -10,15 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <!-- Font Awesome 5.15.1 CSS -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
-    <!--  -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -26,12 +18,19 @@
     <title>DailyCare</title>
     <link rel="icon" href="imgs/DailyCare-Logo.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="bmi.css">
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="membership.css">
+    <link rel="stylesheet" href="regeistration.css">
   </head>
 
   <body>
     <!--THE HEADER  SECTION START-->
     <section class="header-section">
-      <!-- Navbar Section -->
+      <!-- Navbar -->
       <nav class="navbar">
         <div class="navbar__container">
           <img class="logo" src="imgs/DailyCare-Logo.png" alt="logo" />
@@ -58,8 +57,10 @@
           </ul>
         </div>
       </nav>
-      <!--THE HEADER  SECTION PART2 START-->
+    </section>
+
       <!-- Start Landing Section -->
+     <section class="landing">
       <div class="landing-section">
         <div class="Landing-container">
           <div class="landing-content">
@@ -98,9 +99,10 @@
           </div>
         </div>
       </div>
+     </section>
       <!-- END Landing Section -->
-    </section>
-    <!--THE HEADER  SECTION END-->
+
+ 
 
     <!--SERVICES SECTION START-->
     <section class="services-section" id="services-section">
@@ -210,7 +212,7 @@
         </h3>
       </div>
 
-      <form class="bmi-form" id="bmi-form " onsubmit="calculateBMI(event)">
+      <form class="bmi-form" id="bmi-form" onsubmit="calculateBMI(event)">
         <div class="bmi-row">
           <div class="bmi-sub-row">
             <input
@@ -519,14 +521,15 @@
           </svg>
         </p>
         <div class="sub-question">
-          <p class="sub-questiosavings-text">Sign in & get started today</p>
+          <p class="sub-questiosavings-text"> <textarea id="sub-question-input" placeholder="Type your question"></textarea></p>
           <div class="button">
-            <a href="#Sign-Up" class="base-button">
+            <a href="#question-box" class="base-button" >
               <span> Ask for Help</span>
             </a>
           </div>
         </div>
-      </div>
+      
+      
     </section>
     <!--QUESTION SECTION END-->
 
@@ -577,9 +580,11 @@
             </form>
             <div id="create-account-wrap">
               <p>
-                already a member? <a class="sign-in-link" href="#">Sign-in</a>
+                Already a member? <a class="sign-in-link" href="#">Sign-in</a>
               </p>
-              <p></p>
+              <p>
+                <a class="forgot-password-link" href="#">Forgot Password?</a>
+              </p>
             </div>
           </div>
 
@@ -817,7 +822,8 @@
     </footer>
 
     <!--FOOTER SECTION END-->
-
+<script src="bmi.js"></script>
     <script type="module" src="script.js"></script>
+    
   </body>
 </html>

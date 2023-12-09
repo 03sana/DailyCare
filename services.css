@@ -1,0 +1,145 @@
+/******************SERVICES SECTION START******************/
+.services-text {
+  padding: 35px 60px 65px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.services-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 25px;
+}
+
+.service-item {
+  position: relative;
+  display: inline-block;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+.service-item.slide-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+.service-image {
+  object-fit: cover;
+  width: 600px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.service-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.service-text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px 20px 35px 20px;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.service-text::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  transform-origin: center bottom;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.service-text:hover::before {
+  transform: scaleY(1);
+}
+
+.service-heading {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 35px;
+  line-height: 1.4;
+}
+
+.service-sub-heading {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/******************SERVICES SECTION END******************/
+
+@media screen and (max-width: 850px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  .service-image {
+    width: 100%;
+    max-width: 100%;
+  }
+  .services-section {
+    padding: 20px;
+  }
+
+  .services-text {
+    font-size: 24px;
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+  }
+
+  .service-text {
+    text-align: center;
+  }
+
+  .service-heading {
+    font-size: 22px;
+  }
+
+  .service-sub-heading {
+    font-size: 18px;
+  }
+
+  .service-description {
+    margin-bottom: 20px;
+  }
+
+  .base-button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 530px) {
+  .services-text {
+    font-size: 30px;
+    padding: 0 25px;
+  }
+
+  .service-heading {
+    font-size: 25px;
+  }
+}

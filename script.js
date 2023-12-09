@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
 import {
@@ -7,11 +6,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBMvmCPoLhkvmuHmjj0fyeX_VXSOPmVrXU",
   authDomain: "signup-form-54011.firebaseapp.com",
@@ -26,9 +21,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
-console.log(app);
 
-//----- New Registration code start
+//----- New Registration code start -----//
 document.getElementById("signUp").addEventListener("click", function () {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -37,18 +31,15 @@ document.getElementById("signUp").addEventListener("click", function () {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      console.log(user);
       alert("Registration successfully!!");
-      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
-      console.log(errorMessage);
       alert(error);
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   // Add animate class to header-section and landing-section
   document.querySelector(".header-section").classList.add("animate");
@@ -77,55 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function calculateBMI(e) {
-  e.preventDefault();
-  // Get input values
-  const height = parseFloat(document.getElementById("bmi-height").value);
-  const weight = parseFloat(document.getElementById("bmi-weight").value);
-  const age = parseFloat(document.getElementById("bmi-age").value);
-  const gender = document.querySelector('input[name="radio"]:checked').id;
-
-  // Calculate BMI
-  const heightInMeters = height / 100;
-  const bmi = weight / heightInMeters ** 2;
-
-  // Determine BMI category
-  let category, calorieIntake;
-
-  if (bmi < 18.5) {
-    category = "Underweight";
-    // Calculate calorie intake for underweight individuals (example values, you can adjust them)
-    calorieIntake = 40 * weight;
-  } else if (bmi >= 18.5 && bmi < 24.9) {
-    category = "Normal Weight";
-    // Calculate calorie intake for normal weight individuals (example values, you can adjust them)
-    calorieIntake = 35 * weight;
-  } else {
-    category = "Overweight";
-    // Calculate calorie intake for overweight individuals (example values, you can adjust them)
-    calorieIntake = 30 * weight;
-  }
-
-  // Display the calculated BMI in the output element
-  const bmiOutput = document.getElementById("bmi-output");
-  bmiOutput.textContent = `Your BMI is: ${bmi.toFixed(2)}`;
-
-  // Display the BMI category in the output element
-  const categoryOutput = document.getElementById("category-output");
-  categoryOutput.textContent = `Category: ${category}`;
-
-  // Display the daily calorie intake in the output element
-  const calorieOutput = document.getElementById("calorie-output");
-  calorieOutput.textContent = `Daily Calorie Intake: ${calorieIntake.toFixed(
-    2
-  )} calories`;
-  // Show the result area
-  const result = document.querySelector(".bmi-result");
-  result.style.display = "block";
-
-  // Prevent form submission
-  return false;
-}
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 

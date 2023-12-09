@@ -1,0 +1,244 @@
+/******************BMI SECTION START******************/
+
+/* Styling the result section */
+.bmi-result {
+  display: none;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Styling for each piece of information (BMI, Category, and Daily Calorie Intake) */
+.bmi-result p {
+  font-weight: bold;
+  color: #009688;
+  margin: 5px 0;
+}
+
+/* Define the styles for the BMI value */
+.Bmi-Calc {
+  background-color: #beebc226;
+
+  padding: 30px 0px 40px 0px;
+}
+
+.bmi-title {
+  text-align: center;
+  font-size: 40px;
+  margin-block: 30px;
+}
+
+.bmi-title-letters {
+  color: #43994a;
+  font-size: 100px;
+}
+
+.bmi-h3 {
+  margin: 0;
+}
+
+#bmi-output {
+  font-weight: bold;
+  color: #43994a;
+}
+
+#category-output {
+  font-weight: bold;
+  color: #43994a;
+}
+
+#calorie-output {
+  font-weight: bold;
+  color: #43994a;
+}
+
+.bmi-form {
+  background-color: #fff;
+  height: 240px;
+  width: 450px;
+  border-radius: 20px;
+  margin: 20px auto 20px auto;
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  border: solid 1px #43994a;
+  box-shadow: 0 0 40px 0 #ddd;
+}
+
+.bmi-form:hover {
+  box-shadow: 0 0 60px 0 #ccc;
+  transition: 0.4s;
+  transform: scale(1.02);
+}
+
+.bmi-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.bmi-sub-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bmi-text-input {
+  width: 70px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #dbfee5;
+  transition: 0.2s ease;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.bmi-text-input:last-child {
+  margin-bottom: 35px;
+}
+
+.bmi-text-input:focus {
+  box-shadow: 0px 0px 0px 4px #43994a52;
+}
+
+.bmi-submit-button {
+  margin-top: 15px;
+}
+
+#bmi-submit {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  background-color: #43994a;
+  color: #fff;
+  margin: auto;
+  display: block;
+  outline: none;
+  cursor: pointer;
+}
+
+#bmi-submit:hover {
+  background-color: #defedb;
+  color: #43994a;
+}
+
+.bmi-radio-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bmi-text {
+  margin: 0;
+}
+
+.bmi-radio-container input {
+  display: none;
+}
+
+.bmi-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #defedb;
+  border-radius: 50%;
+}
+
+.bmi-radio-container:hover input ~ .bmi-checkmark {
+  background-color: rgba(28, 107, 70, 0.669);
+}
+
+.bmi-radio-container input:checked ~ .bmi-checkmark {
+  background-color: #43994a;
+}
+
+.bmi-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.bmi-radio-container input:checked ~ .bmi-checkmark:after {
+  display: block;
+}
+
+.bmi-radio-container .bmi-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/******************BMI SECTION END******************/
+
+@media screen and (max-width: 850px) {
+  .Bmi-Calc {
+    padding: 20px;
+  }
+
+  .bmi-title {
+    text-align: center;
+  }
+
+  .bmi-h3 {
+    font-size: 15px;
+  }
+  .bmi-title-letters {
+    font-size: 70px;
+  }
+  .bmi-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bmi-row-one,
+  .bmi-row-two {
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .bmi-text-input {
+    width: 48%;
+    box-sizing: border-box;
+  }
+
+  .bmi-text,
+  .bmi-radio-container {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .bmi-result {
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .bmi-output,
+  .category-output,
+  .calorie-output {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .base-button {
+    width: 100%;
+  }
+}
