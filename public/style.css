@@ -24,7 +24,7 @@ body {
 /******************HEADER SECTION START******************/
 .header-section {
   background-color: #beebc226;
-  padding: 22px 65px 192px 50px;
+  padding: 22px 16px 40px 16px;
 }
 
 .header-content {
@@ -35,7 +35,6 @@ body {
 
 .header-section,
 .landing-section {
-  opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
@@ -60,6 +59,7 @@ body {
 .landing-container {
   display: flex;
   color: #43994a;
+  padding: 50px;
 }
 
 .landing-content {
@@ -93,7 +93,6 @@ body {
 }
 .landing-section {
   position: relative;
-  z-index: -9999;
 }
 
 @keyframes bounceUpDown {

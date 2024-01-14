@@ -78,5 +78,4 @@ function calculateBMI(event) {
   // Prevent form submission
   return false;
 }
-
 module.exports = { calculateBMILogic }; // Export the pure function

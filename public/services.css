@@ -17,7 +17,7 @@
   position: relative;
   display: inline-block;
   transform: translateY(50px);
-  opacity: 0;
+
   transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 .service-item.slide-up {
